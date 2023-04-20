@@ -1,0 +1,231 @@
+//Variables 
+$color-primario: #ffffff;
+$color-secundario: #f4f4f4;
+$color-1: #fe0000;
+$color-2: #f6f600;
+$color-3: #0505dd;
+$color-texto: #000000; 
+$color-texto-hover: #a9a9a9;
+
+
+header {
+	width: 100%;
+	height: 13.4em;
+	background-color: $color-secundario;
+    position: sticky;
+	text-align: center;
+	top: 0;
+	left: 0;
+	z-index: 999px;
+	box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5) ;
+
+    .nav__contenedor {
+        height: 10em;
+    }
+    
+    .nav__contenedor-logo {
+        position: relative;
+        text-align: center;
+
+        img {
+            height: 11em;
+            width: auto;
+        }
+    }  
+    .nav__responsive-ul {
+        display: none;
+    }
+    
+    ul, ol {
+        list-style: none;
+    }
+    .nav__ul li a {
+        color: $color-texto;
+        font-family: 'Bebas Neue', sans-serif ;
+        font-size: 1.5em;
+        text-decoration: none;
+        padding: 0.5em 0.7em;
+        display: inline-block;
+ 
+    }
+    
+    .nav__ul > li {
+        display: inline-block;
+    }
+    
+    .nav__ul li a:hover {
+        color: $color-texto-hover;
+    }
+    
+    
+    .nav__li--active {
+        border-top: 1px solid $color-texto;
+        border-bottom: 1px solid $color-texto;
+    }
+    .nav__li--active:hover {
+        border-bottom: 1px solid $color-texto-hover ;
+        border-top: 1px solid $color-texto-hover ;
+    }
+    
+}
+
+main {
+	background-color: $color-primario;
+	width: 100%;
+	height: 140%;
+    
+
+}
+
+.slider {
+    width: 100%;
+    margin: 0;
+    padding: 0%;
+    overflow: hidden;
+
+    ul {
+        display: flex;
+        padding: 0;
+        width: 300%;
+        animation: cambio 16.5s infinite alternate linear;
+        animation-timing-function: ease-in;
+    }
+    
+    li {
+        width: 100%;
+        list-style: none;
+
+        img{
+            object-fit: cover;
+        }
+    }
+
+    @keyframes cambio {
+        0% {margin-left: 0;}
+        30% {margin-left: 0;}
+
+        33% {margin-left: -100%;}
+        60% {margin-left: -100%;}
+
+        63% {margin-left: -200%;}
+        100% {margin-left: -200%;}
+    }
+    
+}
+.flex-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+        .flex-item-1, .flex-item-2, .flex-item-3 {
+        height: 500px;
+        width: 500px;
+        text-align: center;
+        margin: 10px;
+        padding: 10px;
+        }
+    
+      .flex-item-1{
+        background-color: $color-1;
+        }
+        .flex-item-2{
+        background-color: $color-2;
+        }
+        .flex-item-3{
+        background-color: $color-3;
+        }
+        .flex-item img {
+            object-fit: cover;
+        }
+}
+
+footer {
+    background-color: $color-secundario;
+        width: 100%;
+        height: 15em;
+        font-family: 'Bebas Nue', sans-serif; 
+
+        a {
+            color: $color-texto;
+            text-decoration: none;
+        }
+        
+        .grupo-1 {
+            height: 13.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+
+            h2 {
+                font-size: 1.8em;
+                font-weight: 1000px;
+                text-transform: capitalize;
+                line-height: 3em;
+            }
+        
+        }
+        .grupo-2 {
+            height: 2em;
+            background-color: $color-primario;
+            text-align: center;
+            padding-top: 5px;
+
+            small {
+                font-size: 14px;
+                word-spacing: 2px;
+                text-transform: capitalize;
+            }
+        
+        }
+    } 
+
+.conocenos-main {
+    height: 70%;
+    background-color: $color-primario;
+    font-family: 'Bebas Neue', sans-serif ;
+    font-weight: 1000px;
+
+    h1 {
+        text-align: center;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+	    justify-content: center;
+        position: relative;
+        
+
+        .flex-item-4 {
+            height: 500px;
+            width: 500px;
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            margin-right: 100px;
+            font-size: 30px;
+            background-color: $color-secundario;
+            text-align: center;
+            padding-top: 140px;
+
+            .texto-conocenos {
+                height: 200px;
+                width: 90%;
+                text-align: center;
+                justify-content: center;
+                vertical-align: middle;
+            }
+        }
+        .flex-item-5 {
+        height: 500px;
+        width: 500px;
+        margin-top: 10px;
+        margin-left: 100px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        padding: 10px;
+    }
+}
+
+}   
