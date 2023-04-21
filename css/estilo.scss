@@ -6,6 +6,7 @@ $color-2: #f6f600;
 $color-3: #0505dd;
 $color-texto: #000000; 
 $color-texto-hover: #a9a9a9;
+$color-menu-hover: #dcdcdc;
 
 
 header {
@@ -16,8 +17,34 @@ header {
 	text-align: center;
 	top: 0;
 	left: 0;
-	z-index: 999px;
+	z-index: 1500px;
 	box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5) ;
+
+    
+    .menu {
+        text-align: left;
+        position: absolute;
+        top: 1em; 
+        left: .2em;
+        .responsive-boton { 
+            display: block; 
+            border-radius: 10px;
+            outline: none;
+            
+
+            i {
+                display: block;
+                height: 3.5em;
+                width: 30px;
+                height: 30px;
+                padding-top:5px;
+                border: 0;
+                
+            }
+        }
+    
+
+    }
 
     .nav__contenedor {
         height: 10em;
@@ -49,8 +76,10 @@ header {
  
     }
     
-    .nav__ul > li {
-        display: inline-block;
+    .nav__ul  {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
     
     .nav__ul li a:hover {
@@ -180,52 +209,245 @@ footer {
         }
     } 
 
-.conocenos-main {
-    height: 70%;
+  .conocenos-main {
+    height: auto;
     background-color: $color-primario;
     font-family: 'Bebas Neue', sans-serif ;
-    font-weight: 1000px;
+    font-weight: 100px;
 
     h1 {
         text-align: center;
+        font-size: 2.5em;
     }
+    .flex-item-4 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 20px;
+        font-size: 30px;
+        background-color: $color-3;
+        border: 5px solid $color-1;
+        padding-top: 85px;
+        padding-left: 25px;
+        padding-bottom: 85px;
+        padding-right: 25px;
+
+        .texto-conocenos {
+            color: $color-primario;
+            height: 220px;
+            text-align: center;
+        }
 
     .flex-container {
         display: flex;
         flex-direction: row;
-	    justify-content: center;
-        position: relative;
-        
+        justify-content: center;
+  }   
 
-        .flex-item-4 {
-            height: 500px;
-            width: 500px;
-            margin-top: 10px;
-            margin-left: 10px;
-            margin-bottom: 10px;
-            margin-right: 100px;
-            font-size: 30px;
-            background-color: $color-secundario;
-            text-align: center;
-            padding-top: 140px;
-
-            .texto-conocenos {
-                height: 200px;
-                width: 90%;
-                text-align: center;
-                justify-content: center;
-                vertical-align: middle;
-            }
         }
-        .flex-item-5 {
-        height: 500px;
-        width: 500px;
-        margin-top: 10px;
-        margin-left: 100px;
-        margin-bottom: 10px;
-        margin-right: 10px;
+    .flex-item-5 {
+        height: auto;
+        width: auto;
+        text-align: center;
+        margin: 40px;
+        padding: 15px;
+        background-color: $color-1;
+        border: 5px solid $color-3;
+        color: $color-primario;
+        font-size: 25px;
+        }
+    .flex-item-6 {
+        height: auto;
+        width: auto;
+        text-align: center;
+        margin: 40px;
+        padding: 15px;
+        background-color: $color-1;
+        border: 5px solid $color-3;
+        color: $color-primario;
+        font-size: 25px;
+        }
+}
+
+.encontranos-main {
+    height: 1000px;
+    background-color: $color-primario;
+    font-family: 'Bebas Neue', sans-serif ;
+
+    h1 {
+        font-size: 2.5em;
+        text-align: center;
+    }
+    
+    .contenedor_mapa {
+        display: flex;
+	    flex-direction: row;
+	    justify-content: center;
+
+    }
+
+    .mapa {
+        height: 600px;
+        width: 600px;
+        text-align: center;
+        margin: 10px;
         padding: 10px;
+        background-color: $color-1;
+    }
+    .contenedor_texto {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .texto_mapa {
+        font-size: 2.5em;
+        margin-top: 20px;
+        text-align: center;
+        line-height: 60px;
+    }
+
+}
+
+@media only screen and (max-width: 750px) {
+	header {
+	width: 100%;
+	height: 3.5em;
+	background-color: $color-secundario;
+	z-index: 999px;
+	box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5) ;
+	font-family: 'Bebas Neue', sans-serif ;
+
+    
+     .nav__contenedor-logo {
+        position: relative;
+        text-align: center;
+
+        img {
+            height: 3.5em;
+            width: auto;
+        }
+    }
+
+    .nav__contenedor-ul {
+        position: absolute;
+        display: flex;
+        background-color: $color-secundario;
+        width: auto;
+        height: auto;
+        top: 3.5em;
+        margin-left: -100%;
+        ul {
+            flex-direction: column;
+        }
+        li {
+            border: 1px solid $color-texto;
+            
+        }
+        li:hover {
+            cursor: pointer;
+            background-color: $color-menu-hover;
+        }
+    }
+
+    .menu {
+        .responsive-boton {
+            display: inline-block;
+            border-radius: 10px;
+            outline: none;
+        }
+        i {
+            display: block;
+            font-size: 1.2em;
+            width: 30px;
+            height: 30px;
+            padding-top:5px;
+            padding-left: 2px;
+            border: 0;
+            
+        }
+        }
+        
+    }
+    .menu:hover > .nav__contenedor-ul{
+        position: absolute;
+        margin-left: auto;
+    }
+    
+    
+
+}
+
+
+
+.flex-container{
+    display: inline-block;
+
+    .flex-item-1 {
+        display: block;
+        width: 360px;
+        height: auto;
+        margin-top: 15px;
+        margin-right: 7.5px;
+        margin-bottom: 10px;
+        margin-left: 7.5px;
+    }
+    .flex-item-2 {
+        display: block;
+        width: 360px;
+        height: auto;
+        margin-top: 7.5px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        margin-left: 7.5px;
+    }
+    .flex-item-3 {
+        display: block;
+        width: 360px;
+        height: auto;
+        margin-top: 7.5px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        margin-left: 7.5px;
     }
 }
 
-}   
+.conocenos-main {
+    height: auto;
+
+    .flex-item-4{
+        display: block;
+        width: 360px;
+        height: auto;
+        margin-top: 15px;
+        margin-right: 7.5px;
+        margin-bottom: 10px;
+        margin-left: 7.5px;
+        font-size: 25px;
+
+        .texto-conocenos {
+            height: auto;
+            text-align: center;
+            
+        }
+    }
+    .flex-container {
+        display: block;
+        margin: 5px;
+    }
+}
+
+.encontranos-main {
+    height: auto;
+    margin-bottom: 20px;
+    .mapa {
+        height: auto;
+    }
+    .texto_mapa {
+        text-align: center;
+        font-size: 1.5em;
+        line-height: 50px;
+    }
+}
+
+

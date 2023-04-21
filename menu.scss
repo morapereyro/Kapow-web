@@ -1,0 +1,165 @@
+//Variables 
+$color-primario: #ffffff;
+$color-secundario: #f4f4f4;
+$color-1: #fe0000;
+$color-2: #f6f600;
+$color-3: #0505dd;
+$color-texto: #000000; 
+$color-texto-hover: #a9a9a9;
+$color-menu-hover: #dcdcdc;
+
+header {
+	width: 100%;
+	height: 13.4em;
+	background-color: $color-secundario;
+    position: sticky;
+	text-align: center;
+	top: 0;
+	left: 0;
+	z-index: 1500px;
+	box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5) ;
+
+    
+    .menu {
+        text-align: left;
+        position: absolute;
+        top: 1em; 
+        left: .2em;
+        .responsive-boton { 
+            display: block; 
+            border-radius: 10px;
+            outline: none;
+            
+
+            i {
+                display: block;
+                height: 3.5em;
+                width: 30px;
+                height: 30px;
+                padding-top:5px;
+                border: 0;
+                
+            }
+        }
+    
+
+    }
+
+    .nav__contenedor {
+        height: 10em;
+    }
+    
+    .nav__contenedor-logo {
+        position: relative;
+        text-align: center;
+
+        img {
+            height: 11em;
+            width: auto;
+        }
+    }  
+    .nav__responsive-ul {
+        display: none;
+    }
+    
+    ul, ol {
+        list-style: none;
+    }
+    .nav__ul li a {
+        color: $color-texto;
+        font-family: 'Bebas Neue', sans-serif ;
+        font-size: 1.5em;
+        text-decoration: none;
+        padding: 0.5em 0.7em;
+        display: inline-block;
+ 
+    }
+    
+    .nav__ul  {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .nav__ul li a:hover {
+        color: $color-texto-hover;
+    }
+    
+    
+    .nav__li--active {
+        border-top: 1px solid $color-texto;
+        border-bottom: 1px solid $color-texto;
+    }
+    .nav__li--active:hover {
+        border-bottom: 1px solid $color-texto-hover ;
+        border-top: 1px solid $color-texto-hover ;
+    }
+    
+}
+
+@media only screen and (max-width: 750px) {
+
+header {
+	width: 100%;
+	height: 3.5em;
+	background-color: $color-secundario;
+	z-index: 999px;
+	box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5) ;
+	font-family: 'Bebas Neue', sans-serif ;
+
+    
+     .nav__contenedor-logo {
+        position: relative;
+        text-align: center;
+
+        img {
+            height: 3.5em;
+            width: auto;
+        }
+    }
+
+    .nav__contenedor-ul {
+        position: absolute;
+        display: flex;
+        background-color: $color-secundario;
+        width: auto;
+        height: auto;
+        top: 3.5em;
+        margin-left: -100%;
+        ul {
+            flex-direction: column;
+        }
+        li {
+            border: 1px solid $color-texto;
+            
+        }
+        li:hover {
+            cursor: pointer;
+            background-color: $color-menu-hover;
+        }
+    }
+
+    .menu {
+        .responsive-boton {
+            display: inline-block;
+            border-radius: 10px;
+            outline: none;
+        }
+        i {
+            display: block;
+            font-size: 1.2em;
+            width: 30px;
+            height: 30px;
+            padding-top:5px;
+            padding-left: 2px;
+            border: 0;
+            
+        }
+        }
+        
+    }
+    .menu:hover > .nav__contenedor-ul{
+        position: absolute;
+        margin-left: auto;
+    }
+}
