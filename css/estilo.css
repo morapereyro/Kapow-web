@@ -14,14 +14,10 @@ header .menu {
   position: absolute;
   top: 1em;
   left: 0.2em;
+  display: none;
 }
-header .menu .responsive-boton {
-  display: block;
-  border-radius: 10px;
-  outline: none;
-}
-header .menu .responsive-boton i {
-  display: block;
+header .menu i {
+  display: none;
   height: 3.5em;
   width: 30px;
   height: 30px;
@@ -29,7 +25,7 @@ header .menu .responsive-boton i {
   border: 0;
 }
 header .nav__contenedor {
-  height: 10em;
+  height: 10.05em;
 }
 header .nav__contenedor-logo {
   position: relative;
@@ -292,7 +288,7 @@ footer .grupo-2 small {
     width: auto;
     height: auto;
     top: 3.5em;
-    margin-left: -100%;
+    margin-left: 0;
   }
   header .nav__contenedor-ul ul {
     flex-direction: column;
@@ -304,12 +300,12 @@ footer .grupo-2 small {
     cursor: pointer;
     background-color: #dcdcdc;
   }
-  header .menu .responsive-boton {
-    display: inline-block;
+  header .menu {
+    display: block;
     border-radius: 10px;
     outline: none;
   }
-  header .menu i {
+  header i {
     display: block;
     font-size: 1.2em;
     width: 30px;
@@ -318,75 +314,73 @@ footer .grupo-2 small {
     padding-left: 2px;
     border: 0;
   }
-  .menu:hover > .nav__contenedor-ul {
+  header .menu:hover > .nav__contenedor-ul {
     position: absolute;
     margin-left: auto;
   }
-}
-.flex-container {
-  display: inline-block;
-}
-.flex-container .flex-item-1 {
-  display: block;
-  width: 360px;
-  height: auto;
-  margin-top: 15px;
-  margin-right: 7.5px;
-  margin-bottom: 10px;
-  margin-left: 7.5px;
-}
-.flex-container .flex-item-2 {
-  display: block;
-  width: 360px;
-  height: auto;
-  margin-top: 7.5px;
-  margin-right: 20px;
-  margin-bottom: 10px;
-  margin-left: 7.5px;
-}
-.flex-container .flex-item-3 {
-  display: block;
-  width: 360px;
-  height: auto;
-  margin-top: 7.5px;
-  margin-right: 20px;
-  margin-bottom: 10px;
-  margin-left: 7.5px;
-}
-
-.conocenos-main {
-  height: auto;
-}
-.conocenos-main .flex-item-4 {
-  display: block;
-  width: 360px;
-  height: auto;
-  margin-top: 15px;
-  margin-right: 7.5px;
-  margin-bottom: 10px;
-  margin-left: 7.5px;
-  font-size: 25px;
-}
-.conocenos-main .flex-item-4 .texto-conocenos {
-  height: auto;
-  text-align: center;
-}
-.conocenos-main .flex-container {
-  display: block;
-  margin: 5px;
-}
-
-.encontranos-main {
-  height: auto;
-  margin-bottom: 20px;
-}
-.encontranos-main .mapa {
-  height: auto;
-}
-.encontranos-main .texto_mapa {
-  text-align: center;
-  font-size: 1.5em;
-  line-height: 50px;
+  .flex-container {
+    display: inline-block;
+  }
+  .flex-container .flex-item-1 {
+    display: block;
+    width: 360px;
+    height: auto;
+    margin-top: 15px;
+    margin-right: 7.5px;
+    margin-bottom: 10px;
+    margin-left: 7.5px;
+  }
+  .flex-container .flex-item-2 {
+    display: block;
+    width: 360px;
+    height: auto;
+    margin-top: 7.5px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-left: 7.5px;
+  }
+  .flex-container .flex-item-3 {
+    display: block;
+    width: 360px;
+    height: auto;
+    margin-top: 7.5px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-left: 7.5px;
+  }
+  .conocenos-main {
+    height: auto;
+  }
+  .conocenos-main .flex-item-4 {
+    display: block;
+    width: 360px;
+    height: auto;
+    margin-top: 15px;
+    margin-right: 7.5px;
+    margin-bottom: 10px;
+    margin-left: 7.5px;
+    font-size: 25px;
+  }
+  .conocenos-main .flex-item-4 .texto-conocenos {
+    height: auto;
+    text-align: center;
+  }
+  .conocenos-main .flex-container {
+    display: block;
+    margin: 5px;
+  }
+  .encontranos-main {
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .encontranos-main .mapa {
+    height: auto;
+  }
+  .encontranos-main .texto_mapa {
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 50px;
+  }
 }
 
 /*# sourceMappingURL=estilo.css.map */
