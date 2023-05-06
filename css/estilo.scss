@@ -19,26 +19,7 @@ header {
 	left: 0;
 	z-index: 1500px;
 	box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5) ;
-
-    
-    .menu {
-        text-align: left;
-        position: absolute;
-        top: 1em; 
-        left: .2em;
-        display: none;
-      
-
-            i {
-                display: none;
-                height: 3.5em;
-                width: 30px;
-                height: 30px;
-                padding-top:5px;
-                border: 0;
-                
-            }
-    
+   
 
     }
 
@@ -54,9 +35,20 @@ header {
             height: 11em;
             width: auto;
         }
+   
     }  
-    .nav__responsive-ul {
+    
+    #btn-menu {
         display: none;
+    }
+    
+    header label {
+        display: none;
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+        border-right: 1px solid black;
+
     }
     
     ul, ol {
@@ -92,7 +84,6 @@ header {
         border-top: 1px solid $color-texto-hover ;
     }
     
-}
 
 main {
 	background-color: $color-primario;
@@ -142,8 +133,8 @@ main {
 	flex-direction: row;
 	justify-content: center;
         .flex-item-1, .flex-item-2, .flex-item-3 {
-        height: 500px;
-        width: 500px;
+        height: auto;
+        width: auto;
         text-align: center;
         margin: 10px;
         padding: 10px;
@@ -181,6 +172,11 @@ footer {
             justify-content: center;
             flex-direction: column;
             text-align: center;
+
+            img {
+                height: 25px;
+                line-height: 3em ;
+            }
 
             h2 {
                 font-size: 1.8em;
@@ -323,6 +319,23 @@ footer {
                 width: auto;
             }
         }
+
+        .menu {
+            #btn-menu {
+                display: block;
+                position: absolute;
+                margin-top: 0;
+            }
+        }
+        
+        header label {
+            display: none;
+            width: 30px;
+            height: 30px;
+            padding: 10px;
+            border-right: 1px solid black;
+    
+        }
         .nav__contenedor-ul {
             position: absolute;
             display: flex;
@@ -330,7 +343,7 @@ footer {
             width: auto;
             height: auto;
             top: 3.5em;
-            margin-left: 0;
+            margin-left: -100%;
                 ul {
                     flex-direction: column;
                 }
@@ -344,25 +357,8 @@ footer {
                 }  
         }
 
-        .menu {
-                display: block;
-                border-radius: 10px;
-                outline: none;
-            }
-            i {
-                display: block;
-                font-size: 1.2em;
-                width: 30px;
-                height: 30px;
-                padding-top:5px;
-                padding-left: 2px;
-                border: 0;
-                
-            }
-
-            .menu:hover > .nav__contenedor-ul{
-                position: absolute;
-                margin-left: auto;
+            #btn-menu:checked ~.nav__contenedor-ul {
+                margin: 0;
             }
             }
             .flex-container{
@@ -370,7 +366,7 @@ footer {
             
                 .flex-item-1 {
                     display: block;
-                    width: 360px;
+                    
                     height: auto;
                     margin-top: 15px;
                     margin-right: 7.5px;
@@ -379,19 +375,19 @@ footer {
                 }
                 .flex-item-2 {
                     display: block;
-                    width: 360px;
+                    
                     height: auto;
-                    margin-top: 7.5px;
-                    margin-right: 20px;
+                    margin-top: 15px;
+                    margin-right: 7.5px;
                     margin-bottom: 10px;
                     margin-left: 7.5px;
                 }
                 .flex-item-3 {
                     display: block;
-                    width: 360px;
+                    
                     height: auto;
-                    margin-top: 7.5px;
-                    margin-right: 20px;
+                    margin-top: 15px;
+                    margin-right: 7.5px;
                     margin-bottom: 10px;
                     margin-left: 7.5px;
                 }
@@ -404,9 +400,9 @@ footer {
                     width: 360px;
                     height: auto;
                     margin-top: 15px;
-                    margin-right: 7.5px;
+                    margin-right: auto;
                     margin-bottom: 10px;
-                    margin-left: 7.5px;
+                    margin-left: auto;
                     font-size: 25px;
             
                     .texto-conocenos {

@@ -9,39 +9,37 @@ header {
   z-index: 1500px;
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
 }
-header .menu {
-  text-align: left;
-  position: absolute;
-  top: 1em;
-  left: 0.2em;
-  display: none;
-}
-header .menu i {
-  display: none;
-  height: 3.5em;
-  width: 30px;
-  height: 30px;
-  padding-top: 5px;
-  border: 0;
-}
-header .nav__contenedor {
+
+.nav__contenedor {
   height: 10.05em;
 }
-header .nav__contenedor-logo {
+
+.nav__contenedor-logo {
   position: relative;
   text-align: center;
 }
-header .nav__contenedor-logo img {
+.nav__contenedor-logo img {
   height: 11em;
   width: auto;
 }
-header .nav__responsive-ul {
+
+#btn-menu {
   display: none;
 }
-header ul, header ol {
+
+header label {
+  display: none;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  border-right: 1px solid black;
+}
+
+ul, ol {
   list-style: none;
 }
-header .nav__ul li a {
+
+.nav__ul li a {
   color: #000000;
   font-family: "Bebas Neue", sans-serif;
   font-size: 1.5em;
@@ -49,19 +47,23 @@ header .nav__ul li a {
   padding: 0.5em 0.7em;
   display: inline-block;
 }
-header .nav__ul {
+
+.nav__ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-header .nav__ul li a:hover {
+
+.nav__ul li a:hover {
   color: #a9a9a9;
 }
-header .nav__li--active {
+
+.nav__li--active {
   border-top: 1px solid #000000;
   border-bottom: 1px solid #000000;
 }
-header .nav__li--active:hover {
+
+.nav__li--active:hover {
   border-bottom: 1px solid #a9a9a9;
   border-top: 1px solid #a9a9a9;
 }
@@ -119,8 +121,8 @@ main {
   justify-content: center;
 }
 .flex-container .flex-item-1, .flex-container .flex-item-2, .flex-container .flex-item-3 {
-  height: 500px;
-  width: 500px;
+  height: auto;
+  width: auto;
   text-align: center;
   margin: 10px;
   padding: 10px;
@@ -155,6 +157,10 @@ footer .grupo-1 {
   justify-content: center;
   flex-direction: column;
   text-align: center;
+}
+footer .grupo-1 img {
+  height: 25px;
+  line-height: 3em;
 }
 footer .grupo-1 h2 {
   font-size: 1.8em;
@@ -281,6 +287,18 @@ footer .grupo-2 small {
     height: 3.5em;
     width: auto;
   }
+  header .menu #btn-menu {
+    display: block;
+    position: absolute;
+    margin-top: 0;
+  }
+  header header label {
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-right: 1px solid black;
+  }
   header .nav__contenedor-ul {
     position: absolute;
     display: flex;
@@ -288,7 +306,7 @@ footer .grupo-2 small {
     width: auto;
     height: auto;
     top: 3.5em;
-    margin-left: 0;
+    margin-left: -100%;
   }
   header .nav__contenedor-ul ul {
     flex-direction: column;
@@ -300,30 +318,14 @@ footer .grupo-2 small {
     cursor: pointer;
     background-color: #dcdcdc;
   }
-  header .menu {
-    display: block;
-    border-radius: 10px;
-    outline: none;
-  }
-  header i {
-    display: block;
-    font-size: 1.2em;
-    width: 30px;
-    height: 30px;
-    padding-top: 5px;
-    padding-left: 2px;
-    border: 0;
-  }
-  header .menu:hover > .nav__contenedor-ul {
-    position: absolute;
-    margin-left: auto;
+  header #btn-menu:checked ~ .nav__contenedor-ul {
+    margin: 0;
   }
   .flex-container {
     display: inline-block;
   }
   .flex-container .flex-item-1 {
     display: block;
-    width: 360px;
     height: auto;
     margin-top: 15px;
     margin-right: 7.5px;
@@ -332,19 +334,17 @@ footer .grupo-2 small {
   }
   .flex-container .flex-item-2 {
     display: block;
-    width: 360px;
     height: auto;
-    margin-top: 7.5px;
-    margin-right: 20px;
+    margin-top: 15px;
+    margin-right: 7.5px;
     margin-bottom: 10px;
     margin-left: 7.5px;
   }
   .flex-container .flex-item-3 {
     display: block;
-    width: 360px;
     height: auto;
-    margin-top: 7.5px;
-    margin-right: 20px;
+    margin-top: 15px;
+    margin-right: 7.5px;
     margin-bottom: 10px;
     margin-left: 7.5px;
   }
@@ -356,9 +356,9 @@ footer .grupo-2 small {
     width: 360px;
     height: auto;
     margin-top: 15px;
-    margin-right: 7.5px;
+    margin-right: auto;
     margin-bottom: 10px;
-    margin-left: 7.5px;
+    margin-left: auto;
     font-size: 25px;
   }
   .conocenos-main .flex-item-4 .texto-conocenos {
